@@ -1,0 +1,77 @@
+CREATE TABLE [dbo].[User]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Login] varchar(20) NOT NULL,
+	[Password] varchar(20) NOT NULL
+)
+
+
+INSERT INTO [dbo].[User] (Login, Password)
+VALUES ('user', 'psw');
+INSERT INTO [dbo].[User]  (Login, Password)
+VALUES ('admin', '1234567890');
+INSERT INTO [dbo].[User] (Login, Password)
+VALUES ('user2', 'qwerty');
+
+
+
+CREATE TABLE [dbo].[Service]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Name] nvarchar(150) NOT NULL
+)
+
+
+INSERT INTO [dbo].[Service] (Name)
+VALUES (N'Повреждение абонентской проводки в помещении абонента'), 
+(N'Замена абонентской проводки в помещении абонента'), 
+(N'Повреждение или замена переходных устройств (адаптеров, коннекторов, патч-корд, пигтейли др.) оптических оконечных устройств, ОРА'), 
+(N'Повреждение оптического соединительного кабеля между ONT и OPA'), 
+(N'Повреждение ОВ в квартире, помещении, офисе т.д. абонента'), 
+(N'Повреждение в абонентской антенне, являющееся собственностью абонента'), 
+(N'Проблема в абонентском устройстве'), 
+(N'Повреждение модема, STB, IAD,ONT( замена) по вине абонента'), 
+(N'Замена или установка абонентской розетки (за исключением оптической)'), 
+(N'Замена или установка оптической розетки'), 
+(N'Восстановление (замена)абонентской проводки с использованием кабеля UTP Cat.5e по просьбе абонента');
+
+
+CREATE TABLE [dbo].[Ticket]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Date] date NOT NULL,
+	[Contract] nvarchar(20) NOT NULL,
+	[FIOClient] nvarchar(50) NOT NULL,
+	[Phone] nvarchar(20) NOT NULL,
+	[FIOPerformer] nvarchar(50) NOT NULL,
+	[Address] nvarchar(50) NOT NULL,
+	[ServiceId] int NOT NULL,
+	[Sum] float NOT NULL
+)
+
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001369701', '2020-11-19', N'Маркарян Арсен Ашотович', '80346712421', N'Демидов Андрей Степанович', N'ул. Маршала, 15 Минск', 1, 100);
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001367881', '2020-11-18', N'Свитый Андрей Тарасович', '80223375544', N'Бахта Ярослав Ростиславович', N'ул. Шевченка, 55 Минск', 3, 55);
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001361231', '2020-11-17', N'Полищук Владислав Олегович', '80223379012', N'Демидов Андрей Степанович', N'ул. Зеленая, 110 Минск', 5, 34);
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001362991', '2020-11-16', N'Лермонтов Степан Романович', '80223373388', N'Бахта Ярослав Ростиславович', N'ул. Центральная, 9 Минск', 6, 22);
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001369701', '2020-10-11', N'Маркарян Арсен Ашотович', '80346712421', N'Демидов Андрей Степанович', N'ул. Маршала, 15 Минск', 10, 20);
+INSERT INTO Ticket(Contract, Date, FIOClient, Phone, FIOPerformer, Address, ServiceId, Sum)
+VALUES ('2233001369701', '2020-10-09', N'Маркарян Арсен Ашотович', '80346712421', N'Бахта Ярослав Ростиславович', N'ул. Маршала, 15 Минск', 11, 90);
+
+CREATE TABLE [dbo].[Report]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[DateStart] date NOT NULL,
+	[DateEnd] date NOT NULL,
+	[Description] nvarchar(70) NOT NULL,
+	[Sum] float NOT NULL
+)
+
+INSERT INTO Report(DateStart, DateEnd, Description, Sum)
+VALUES ('2020-10-1','2020-11-1', N'Итоговая сумма по всем исполнителям', 110),
+('2020-10-1','2020-11-1', N'Итоговая сумма по исполнителю Демидов Андрей Степанович', 20),
+('2020-10-1','2020-11-1', N'Итоговая сумма по исполнителю Бахта Ярослав Ростиславович', 90)

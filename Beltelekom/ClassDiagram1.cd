@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Beltelekom.DBEntity.BeltelekomDatabaseEntities">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAACAAAAAAAAEAAAQAAAAAAAAAAABAA=</HashCode>
+      <FileName>DBEntity\BelTelekomModel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.DBEntity.Report">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACCAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>DBEntity\Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.DBEntity.Service">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBEntity\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.DBEntity.Ticket">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAIAAAAAAAAAAAAAAAAAAAAAADAAAIIIAAAAQ=</HashCode>
+      <FileName>DBEntity\Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.DBEntity.User">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>DBEntity\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.Forms.AddReportForm">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACgAABAAIAyAIgACAABAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\AddReportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.Forms.AddTicketForm">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAECAAABQAAAiAAgECAAAAQgACAAIIAAAAAgA=</HashCode>
+      <FileName>Forms\AddTicketForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beltelekom.LoginForm">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAICAAAACAAABAAAACAAAASAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Forms\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
